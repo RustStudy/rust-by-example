@@ -16,7 +16,7 @@ match optional {
 };
 
 
-
+if-let 更干净的用法，并且允许增加匹配失败的选项：
 */
 
 fn main() {
@@ -28,19 +28,23 @@ fn main() {
 
     // The `if let` construct reads: "if `let` destructures `number` into
     // `Some(i)`, evaluate the block (`{}`). Else do nothing.
+    // `if let`解构`number`到`Some(i)`，执行块（`{}`）。否则什么都不做。
     if let Some(i) = number {
         println!("Matched {:?}!", i);
     }
 
     // If you need to specify a failure, use an else:
+    // 如果你需要指定失败，用else:
     if let Some(i) = letter {
         println!("Matched {:?}!", i);
     } else {
         // Destructure failed. Change the failure case.
+        // 解构失败。
         println!("Didn't match a number. Let's go with a letter!");
     };
 
     // Provide an altered failing condition.
+    // 提供一个失败的情况
     let i_like_letters = false;
 
     if let Some(i) = emoticon {
