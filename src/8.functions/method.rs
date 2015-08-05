@@ -131,7 +131,7 @@ fn main() {
 
     // Error! Previous `destroy` call "consumed" `pair`
     // 错误！ 前面的`destroy`调用“消费”了`pair`
-    // 注： 所有权被转移
+    // 注： 堆分配为非拷贝类型，move，（所有权被转移）
     // pair.destroy();
     // TODO ^ Try uncommenting this line
 }
