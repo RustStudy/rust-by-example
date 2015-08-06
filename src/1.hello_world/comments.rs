@@ -21,6 +21,14 @@ fn main() {
      // Observe how block comments allow easy expression manipulation
      // which line comments do not. Deleting the comment deliminators
      // will change the result:
+
+
+    // 文档注释为三个斜杠,通过执行cargo doc或rustdoc生成文档
+    /// # 文档注释
+    ///   ```rust
+    ///  let x = 5 + /* 90 + */ 5;
+    /// ```
+
      let x = 5 + /* 90 + */ 5;
      println!("Is `x` 10 or 100? x = {}", x);
 }
